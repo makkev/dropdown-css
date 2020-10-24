@@ -97,11 +97,15 @@ nav {
 }
 
 nav ul {
+  margin: 0 auto;
+  width: 80%;
 }
 
+/* First Level*/
 nav ul li {
   display: block;
   float: left;
+  position: relative;
 }
 
 nav ul a {
@@ -109,6 +113,24 @@ nav ul a {
   float: left;
   width: 150px;
   padding: 10px 20px;
+}
+
+nav ul a:hover {
+  background: #111111;
+}
+
+/* Second Level*/
+nav ul li ul {
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  background: #333333;
+  top: 42px;
+}
+
+nav ul li:hover > ul {
+  display: block;
 }
 
 nav ul li ul li {
@@ -189,7 +211,7 @@ nav ul li ul li {
 
 .clearfix::before,
 .clearfix::after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -237,20 +259,20 @@ nav ul li ul li {
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
   }
 
   pre {
