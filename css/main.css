@@ -126,7 +126,8 @@ nav ul li ul {
   display: none;
   position: absolute;
   background: #333333;
-  top: 42px;
+  top: 100%;
+  width: 190px;
 }
 
 nav ul li:hover > ul {
@@ -135,6 +136,15 @@ nav ul li:hover > ul {
 
 nav ul li ul li {
   float: none;
+  position: relative;
+  height: 42px;
+}
+
+/* 3rd Level */
+nav ul ul ul {
+  top: 0;
+  background: #222;
+  left: 100%;
 }
 
 /* ==========================================================================
